@@ -1,0 +1,120 @@
+body {
+    // background-color: pink;
+    background-color: rgb(238, 79, 105);
+
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    transition: 2s;
+    min-width: 700px;
+    main {
+        .button {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+
+            // background-color: pink;
+
+            cursor: pointer;
+            border-radius: 10px;
+
+            .icon {
+                background: rgba(255, 255, 255, 0.479);
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                overflow-x: hidden;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                max-width: 180px;
+                .vac1 {
+                    z-index: 5;
+                    height: 60px;
+                    transition: 0.9s;
+                    transform: translateX(-100px) rotate(-40deg);
+                }
+                .vac2 {
+                    z-index: 5;
+                    height: 60px;
+                    transition: 0.9s;
+                    transform: translateX(100px) rotate(40deg);
+                }
+                .sofa {
+                    z-index: 1;
+                    height: 100px;
+                    transform: translateX(-20px);
+                }
+            }
+            .text {
+                background: white;
+                padding: 56px 30px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+        .button:hover {
+            animation: ease-in-out anim 1.3s forwards;
+            @keyframes anim {
+                5% {
+                    transform: scale(1);
+                }
+                10% {
+                    transform: scale(1.02);
+                }
+                20% {
+                    transform: scale(1);
+                }
+                30% {
+                    transform: scale(0.9);
+                }
+                60% {
+                    transform: scale(0.8);
+                }
+                70% {
+                    transform: scale(0.82);
+                }
+                80% {
+                    transform: scale(0.8);
+                }
+                90% {
+                    transform: scale(0.81);
+                }
+                100% {
+                    transform: scale(0.8);
+                }
+            }
+        }
+        .button:not(:hover) {
+            animation: ease-in-out anim1 1.3s forwards;
+            @keyframes anim1 {
+                0% {
+                    transform: scale(0.8);
+                }
+                5% {
+                    transform: scale(0.8);
+                }
+                70% {
+                    transform: scale(1);
+                }
+                75% {
+                    transform: scale(0.95);
+                }
+                80% {
+                    transform: scale(0.96);
+                }
+                85% {
+                    transform: scale(1);
+                }
+                90% {
+                    transform: scale(0.99);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
